@@ -1,0 +1,3 @@
+# Lesson 1 Assignment: Introducing our tech stack
+
+This is my first ever web server and I did not know what to do at first. Like any programmer who forgot something, or in my case did not know what to do, I googled and found this [link](https://www.geeksforgeeks.org/how-to-build-a-simple-web-server-with-node-js/). This showed me how to create a simple web server with the name of someone I know (my wife).
