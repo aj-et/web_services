@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json()); // This will handle JSON requests
 
-// app.use('/', require('./routes'))
+app.use('/', require('./routes/index'))
 app.use('/contacts', require('./routes/contacts'));
 
 mongodb.run()
