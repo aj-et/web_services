@@ -1,6 +1,7 @@
-const routes = require('express').Router();
+const express = require('express');
+const routes = express.Router();
 
-const baseController = require('../controllers');
+const baseController = require('../controllers/index');
 
 routes.get('/', baseController.getName);
 
