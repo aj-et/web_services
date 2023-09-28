@@ -55,7 +55,7 @@ const updateContact = async (req, res) => {
             { $set: updatedContact }
         );
 
-        if (result.modifiedCount === 1) {
+        if (result) {
             res.status(204).json({ message: 'Contact updated successfully' });
         } else {
             res.status(404).send('Contact not found');
