@@ -13,11 +13,11 @@ POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Aaron",
-    "lastName":"Tumbokon",
-    "email":"aaron@test.com",
+    "firstName":"Nikolai",
+    "lastName":"Tesla",
+    "email":"tesla@test.com",
     "favoriteColor":"Blue",
-    "birthday":"07/31/1997"
+    "birthday":"07/10/1856"
 }
 
 ### Update contact
@@ -25,11 +25,11 @@ PUT http://localhost:8080/contacts/6514fee173b1b5e0ddafca9d HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "Aaron",
-    "lastName": "Tumbokon",
-    "email": "aaron@example.com",
-    "favoriteColor": "Red",
-    "birthday": "07/31/1997"
+    "firstName": "Charles",
+    "lastName": "Darwin",
+    "email": "darwinism@test.com",
+    "favoriteColor": "Brown",
+    "birthday": "02/12/1809"
 }
 
 ### Delete contact
@@ -44,3 +44,30 @@ GET https://web-service-86g0.onrender.com/contacts/650b4366377081f127291025
 GET https://web-service-86g0.onrender.com/contacts/650b43fc377081f127291026
 ###
 GET https://web-service-86g0.onrender.com/contacts/650b4443377081f127291027
+
+### Create contact
+POST https://web-service-86g0.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Nikolai",
+    "lastName":"Tesla",
+    "email":"tesla@test.com",
+    "favoriteColor":"Blue",
+    "birthday":"07/10/1856"
+}
+
+### Update contact
+PUT https://web-service-86g0.onrender.com/6514fee173b1b5e0ddafca9d HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Charles",
+    "lastName": "Darwin",
+    "email": "darwinism@test.com",
+    "favoriteColor": "Brown",
+    "birthday": "02/12/1809"
+}
+
+### Delete contact
+DELETE https://web-service-86g0.onrender.com/6514fee173b1b5e0ddafca9d HTTP/1.1
