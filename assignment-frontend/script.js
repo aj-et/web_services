@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                     <p>Birthday: ${data.birthday}</p>
                 </div>
             `;
+            document.getElementById('getContactId').value = '';
         } catch (error) {
             console.error('Error:', error);
         }
@@ -88,6 +89,14 @@ document.addEventListener('DOMContentLoaded', async function() {
 
             const resultDiv = document.querySelector('.createContactResult');
             resultDiv.innerHTML = `<pre>Contact Created Successfully</pre>`;
+
+            // Clear the input fields after a successful update
+            document.getElementById('createFirstName').value = '';
+            document.getElementById('createLastName').value = '';
+            document.getElementById('createEmail').value = '';
+            document.getElementById('createFavoriteColor').value = '';
+            document.getElementById('createBirthday').value = '';
+
 
             await getAllContacts();
         } catch (error) {
@@ -129,6 +138,15 @@ document.addEventListener('DOMContentLoaded', async function() {
     
             const resultDiv = document.querySelector('.updateContactResult');
             resultDiv.innerHTML = `<pre>Contact Updated Successfully</pre>`;
+
+            // Clear the input fields after a successful update
+            document.getElementById('updateContactId').value = '';
+            document.getElementById('updateFirstName').value = '';
+            document.getElementById('updateLastName').value = '';
+            document.getElementById('updateEmail').value = '';
+            document.getElementById('updateFavoriteColor').value = '';
+            document.getElementById('updateBirthday').value = '';
+
     
             await getAllContacts();
         } catch (error) {
@@ -152,6 +170,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
             const resultDiv = document.querySelector('.deleteContactResult');
             resultDiv.innerHTML = `<pre>Contact Deleted Successfully</pre>`;
+            document.getElementById('deleteContactId').value = '';
             await getAllContacts();
         } catch (error) {
             console.error('Error:', error);
