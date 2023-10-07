@@ -5,7 +5,7 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "web-service-86g0.onrender.com/api-docs",
   "basePath": "/",
   "schemes": [
     "http"
@@ -31,7 +31,7 @@
         }
       },
       "post": {
-        "description": "Create Contact",
+        "description": "Create contact",
         "parameters": [
           {
             "name": "body",
@@ -70,7 +70,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "Get a specific contact using the ID",
+        "description": "Get a specific contact using ID",
         "parameters": [
           {
             "name": "id",
@@ -92,7 +92,7 @@
         }
       },
       "put": {
-        "description": "Update a contact using the ID",
+        "description": "Update a specific contact using ID",
         "parameters": [
           {
             "name": "id",
@@ -138,7 +138,7 @@
         }
       },
       "delete": {
-        "description": "Delete the contact",
+        "description": "Delete Contact",
         "parameters": [
           {
             "name": "id",
