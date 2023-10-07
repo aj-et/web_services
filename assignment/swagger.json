@@ -8,7 +8,7 @@
   "host": "web-service-86g0.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/contacts/": {
