@@ -21,7 +21,7 @@ content-type: application/json
 }
 
 ### Update contact
-PUT http://localhost:8080/contacts/6514fee173b1b5e0ddafca9d HTTP/1.1
+PUT http://localhost:8080/contacts/6518fb6305235c9563b1b2a0 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -33,7 +33,7 @@ Content-Type: application/json
 }
 
 ### Delete contact
-DELETE http://localhost:8080/contacts/6514fee173b1b5e0ddafca9d HTTP/1.1
+DELETE http://localhost:8080/contacts/6518fb6305235c9563b1b2a0 HTTP/1.1
 
 // PRODUCTION Deploy
 ###
@@ -58,7 +58,7 @@ content-type: application/json
 }
 
 ### Update contact
-PUT https://web-service-86g0.onrender.com/6514fee173b1b5e0ddafca9d HTTP/1.1
+PUT https://web-service-86g0.onrender.com/contacts/6518fc36ffe8696a92ac9228 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -70,4 +70,4 @@ Content-Type: application/json
 }
 
 ### Delete contact
-DELETE https://web-service-86g0.onrender.com/6514fee173b1b5e0ddafca9d HTTP/1.1
+DELETE https://web-service-86g0.onrender.com/contacts/6518fc36ffe8696a92ac9228 HTTP/1.1

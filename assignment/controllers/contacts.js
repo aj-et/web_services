@@ -4,6 +4,7 @@ const db = client.db('people'); // Database name
 const collection = db.collection('contacts'); // Collection name
 
 const getAll = async (req, res) => {
+    console.log(req.header('apiKey'));
     try {
         const contacts = await collection.find({}).toArray();
         res.json(contacts);
@@ -15,7 +16,6 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
     const contactId = req.params.id;
-
     try {
         const contact = await collection.findOne({ _id: new ObjectId(contactId) })
         if (contact) {
@@ -26,14 +26,20 @@ const getSingle = async (req, res) => {
     } catch (error) {
         console.error('Error retrieving contact:', error);
         res.status(500).send('Internal Server Error');
-        }
+    }
 }
 
 const createContact = async (req, res) => {
-    const newContact = req.body;
+    const contact = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        favoriteColor: req.body.favoriteColor,
+        birthday: req.body.birthday
+    };
 
     try {
-        const result = await collection.insertOne(newContact);
+        const result = await collection.insertOne(contact);
         if (result) {
             res.status(201).json({ message: 'Contact created successfully' });
         } else {
@@ -46,13 +52,19 @@ const createContact = async (req, res) => {
 }
 
 const updateContact = async (req, res) => {
-    const contactId = req.params.id; // Assuming the contact ID is passed in the URL
-    const updatedContact = req.body;
+    const contactId = new ObjectId(req.params.id); // Assuming the contact ID is passed in the URL
+    
+    const contact = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        favoriteColor: req.body.favoriteColor,
+        birthday: req.body.birthday
+    };
 
     try {
-        const result = await collection.updateOne(
-            { _id: new ObjectId(contactId) },
-            { $set: updatedContact }
+        const result = await collection.replaceOne(
+            { _id: contactId }, contact
         );
 
         if (result) {
