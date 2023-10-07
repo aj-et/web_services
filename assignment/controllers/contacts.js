@@ -41,6 +41,7 @@ const createContact = async (req, res) => {
     try {
         const result = await collection.insertOne(contact);
         if (result) {
+            console.log(contact._id)
             res.status(201).json({ message: 'Contact created successfully' });
         } else {
             res.status(500).send('Error creating contact');

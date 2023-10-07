@@ -1,0 +1,19 @@
+.getAllContacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.contactCard {
+    border: black 1px solid;
+    width: 250px;
+    padding: 5px;
+}
+
+.getContactResult {
+    margin-top: 20px;
+}
+
+pre {
+    color: red;
+}
