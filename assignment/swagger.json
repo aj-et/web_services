@@ -5,7 +5,7 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "web-service-86g0.onrender.com/api-docs",
+  "host": "web-service-86g0.onrender.com",
   "basePath": "/",
   "schemes": [
     "http"
