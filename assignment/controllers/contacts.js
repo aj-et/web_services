@@ -68,7 +68,7 @@ const updateContact = async (req, res) => {
         );
 
         if (result) {
-            res.status(204).json({ message: 'Contact updated successfully' });
+            res.status(204).header({ 'Custom-Message': 'Contact updated successfully' }).send();
         } else {
             res.status(404).send('Contact not found');
         }

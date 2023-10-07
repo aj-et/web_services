@@ -11,19 +11,9 @@
     "http"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/contacts/": {
       "get": {
-        "description": "",
+        "description": "Get all contacts",
         "parameters": [
           {
             "name": "apiKey",
@@ -41,7 +31,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Create Contact",
         "parameters": [
           {
             "name": "body",
@@ -80,7 +70,7 @@
     },
     "/contacts/{id}": {
       "get": {
-        "description": "",
+        "description": "Get a specific contact using the ID",
         "parameters": [
           {
             "name": "id",
@@ -102,7 +92,7 @@
         }
       },
       "put": {
-        "description": "",
+        "description": "Update a contact using the ID",
         "parameters": [
           {
             "name": "id",
@@ -148,7 +138,7 @@
         }
       },
       "delete": {
-        "description": "",
+        "description": "Delete the contact",
         "parameters": [
           {
             "name": "id",
